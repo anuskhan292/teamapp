@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./appassigment.css">
+</head>
+
+<body>
+        
+
+    <fieldset class="fieldset">
+        <legend>Sign Up</legend>
+        <div class="container">
+            <div class="login-box">
+                <h1>Sign Up here</h1>
+                
+                    <input id="name" type="name" placeholder="enter a name"><br>
+                    <input id="fName" type="f-name" placeholder="enter a faher name"><br>
+                    <input id="email" type="email" placeholder="enter email"><br>
+                    <input id="pass" type="password" placeholder="enter password"><br><br>
+                    <button onclick= "signup()">Sign Up </button><br>
+                    <a id="hrefLogin" href="./login.html">login</a>
+
+                
+            </div>
+        </div>
+    </fieldset>
+
+
+
+
+    <!-- javascript -->
+    <!-- <script src="appassigment.js"></script> -->
+    <script>
+        function signup(){ 
+
+// console.log("runing");
+var name =  document.getElementById("name").value;
+var fName = document.getElementById("fName").value;
+var email = document.getElementById("email").value;
+var pass = document.getElementById("pass").value;
+
+localStorage.setItem("name1",name);
+localStorage.setItem("fName1",fName);
+localStorage.setItem("email1",email);
+localStorage.setItem("pass1",pass);
+
+document.getElementById("name").value="";
+document.getElementById("fName").value="";
+document.getElementById("email").value="";
+document.getElementById("pass").value="";
+
+alert("User registerd sucecessfully...!!!")
+}   
+    </script>
+</body>
+
+</html>
